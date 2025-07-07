@@ -32,8 +32,7 @@ onMounted(async () => {
       throw new Error('No se pudieron cargar los eventos.');
     }
     
-    eventos.value = await response.json();
-    console.log(eventos.value);
+    eventos.value = await response.json();    
   } catch (err) {
     error.value = err.message;
   } finally {
