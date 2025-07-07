@@ -1,7 +1,8 @@
 // src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import CronogramaView from '../views/CronogramaView.vue' // Importa la nueva vista
+import CronogramaView from '../views/CronogramaView.vue'
+import { showLoader, hideLoader } from '../state/loader.js'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,5 +39,16 @@ const router = createRouter({
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  showLoader(); 
+  setTimeout(() => {
+    next(); 
+  }, 400); 
+});
+
+router.afterEach(() => {
+  hideLoader(); 
+});
 
 export default router

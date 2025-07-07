@@ -2,9 +2,12 @@
 import { RouterLink, RouterView } from 'vue-router'
 import SiteHeader from './components/SiteHeader.vue'
 import SiteFooter from './components/SiteFooter.vue'
+import Loader from './components/Loader.vue'
+import { loaderState } from './state/loader'
 </script>
 
 <template>
+  <Loader v-if="loaderState.isLoading" />
   <div>
     <SiteHeader />
     <main>

@@ -239,7 +239,7 @@
   {
     "id": 14,
     "evento": "Mendoza Folk Fest",
-    "imagen": "/assets/eventos/evento4.jpg",
+    "imagen": null,
     "fecha": "2026-01-24",
     "lugar": "Teatro Griego Frank Romero Day",
     "ciudad": "Mendoza",

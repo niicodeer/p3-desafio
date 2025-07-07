@@ -61,8 +61,10 @@
     padding: 2rem;
     border-radius: 15px;
     width: 90%;
+    max-height: 85vh;
     max-width: 800px;
     position: relative;
+    overflow: auto;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     animation: slide-in 0.3s ease-out;
   }

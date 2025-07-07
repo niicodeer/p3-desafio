@@ -1,7 +1,8 @@
 <template>
     <div class="event-card">
         <div class="card-image">
-            <i class="fas fa-music fa-5x"></i>
+            <img v-if="evento.imagen != null && evento.imagen != ''" :src="evento.imagen" :alt="evento.evento" >
+            <i v-else class="fas fa-music fa-5x"></i>
         </div>
         <div class="card-body">
             <span class="card-genre">{{ evento.genero }}</span>
@@ -46,11 +47,21 @@ defineProps({
 
 .card-image {
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    height: 150px;
+    height: 200px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     color: white;
+}
+.card-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.card-image i {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
 }
 
 .card-body {

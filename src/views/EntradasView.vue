@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <main class="container container-margin">
     <h1 class="main-title">Próximos Eventos</h1>
     <p class="main-subtitle">Descubre los mejores shows y festivales. ¡No te quedes afuera!</p>
     
@@ -14,7 +14,7 @@
         :evento="evento" 
       />
     </div>
-  </div>
+  </main>
 </template>
 
 <script setup>
